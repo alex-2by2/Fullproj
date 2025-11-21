@@ -1,0 +1,18 @@
+workflows:
+  android-workflow:
+    name: Android build
+    environment:
+      flutter: stable
+    scripts:
+      - name: Install dependencies
+        script: |
+          flutter pub get
+      - name: Decode keystore from env (if using base64)
+        script: |
+          if [ -n "$KEYSTORE_BASE64" ]; then
+            echo "$KEYSTORE_BASE64" | base64 --decode > android/app/my-release-key.jks
+          fi
+      - name: Build APK
+        script: flutter build apk --release --no-shrink
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
