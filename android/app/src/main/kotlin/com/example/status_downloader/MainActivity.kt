@@ -1,5 +1,12 @@
 package com.example.status_downloader
 
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+  // ...
+}
+package com.example.status_downloader
+
 import android.app.Activity
 import android.content.ContentValues
 import android.content.Intent
