@@ -24,5 +24,8 @@
             </intent-filter>
         </activity>
 
+        <!-- PreviewActivity for in-app preview -->
+        <activity android:name=".PreviewActivity" android:exported="false"/>
+
     </application>
 </manifest>
