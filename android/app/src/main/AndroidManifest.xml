@@ -3,7 +3,6 @@
     package="com.example.status_downloader">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <!-- optional: writing for older devices, SAF preferred -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
 
     <application
@@ -11,7 +10,7 @@
         android:icon="@mipmap/ic_launcher"
         android:usesCleartextTraffic="true">
 
-        <!-- Ensure this activity points to your Kotlin MainActivity which extends FlutterActivity (v2) -->
+        <!-- MainActivity must extend io.flutter.embedding.android.FlutterActivity (v2) -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
